@@ -8,7 +8,8 @@ This repository implements the 3DGS rendering engine by translating the original
 ├── data              # data folder, including point_cloud.ply file(compressed into multiple .zip files), data for 3DGS scene representation
 ├── graphics_utils.py # grapical utilities functions from "graphdeco-inria/gaussian-splatting" repository
 ├── myfunctions.py    # my self-defined functions, trying to transfer each step of the pipeline of 3DGS into python functions 
-├── main.ipynb        # main notebook, including the whole pipeline of 3DGS, using the source code from "graphdeco-inria/gaussian-splatting" repository, and trying to use my_functions.py to replace the functions in the source code  
+├── main.ipynb        # main notebook, including the whole pipeline of 3DGS, using the source code from "graphdeco-inria/gaussian-splatting" repository, and trying to use my_functions.py to replace the functions in the source code
+├── main.py           # converted from main.ipynb
 ├── environment.yml   # the environment file from the "graphdeco-inria/gaussian-splatting" repository, which is used to create the python environment   
 └── submodules        # The submodules(mainly in C++/CUDA) from the "graphdeco-inria/gaussian-splatting" repository, which need to compile and install in the python environment
 ```
