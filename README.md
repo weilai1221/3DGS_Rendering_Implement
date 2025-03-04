@@ -16,40 +16,25 @@ Python (`_C.rasterize_gaussians()`)
 ```
 
 
-trace preprocessCUDA
-1. 
-// Initialize radius and touched tiles to 0. If this isn't changed, this Gaussian will not be processed further.
+- trace forward.cu.preprocessCUDA 
+1. Initialize radius and touched tiles to 0. If this isn't changed, this Gaussian will not be processed further.
 
-2.
-// Perform near culling, quit if outside.
+2. Perform near culling, quit if outside.
 
-3.
-// Transform point by projecting
+3. Transform point by projecting
 
-4.
-// If 3D covariance matrix is precomputed, use it, otherwise compute from scaling and rotation parameters. 
+4. If 3D covariance matrix is precomputed, use it, otherwise compute from scaling and rotation parameters. 
 
-5.
-// Compute 2D screen-space covariance matrix
+5. Compute 2D screen-space covariance matrix
 
-6.
-// Invert covariance (EWA algorithm)
+6. Invert covariance (EWA algorithm)
 
-7.
-// Compute extent in screen space (by finding eigenvalues of
-// 2D covariance matrix). Use extent to compute a bounding rectangle
-// of screen-space tiles that this Gaussian overlaps with. Quit if
-// rectangle covers 0 tiles. 
+7. Compute extent in screen space (by finding eigenvalues of2D covariance matrix). Use extent to compute a bounding rectangle of screen-space tiles that this Gaussian overlaps with. Quit if rectangle covers 0 tiles. 
 
+8. If colors have been precomputed, use them, otherwise convert spherical harmonics coefficients to RGB color.
 
-8.
-// If colors have been precomputed, use them, otherwise convert
-// spherical harmonics coefficients to RGB color.
+9. Store some useful helper data for the next steps.
 
-9.
-// Store some useful helper data for the next steps.
-
-10.
-// Inverse 2D covariance and opacity neatly pack into one float4
+10. Inverse 2D covariance and opacity neatly pack into one float4
 
 
