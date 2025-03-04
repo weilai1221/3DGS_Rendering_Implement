@@ -1,8 +1,10 @@
 # 3DGS_Rendering_Implement
 This repository implements the 3DGS rendering engine by translating the original graphdeco-inria/gaussian-splatting C++/CUDA code to Python and PyTorch. It modularizes the rendering process for clarity and easier maintenance.
+---
 
+# Souce Code Workflow (From graphdeco-inria/gaussian-splatting)
 
-Diff-gaussian-rasterization Workflow
+## Diff-gaussian-rasterization Workflow
 
 ```
 Python (`_C.rasterize_gaussians()`)
@@ -36,5 +38,7 @@ Python (`_C.rasterize_gaussians()`)
 9. Store some useful helper data for the next steps.
 
 10. Inverse 2D covariance and opacity neatly pack into one float4
+
+---
 
 
