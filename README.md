@@ -16,8 +16,7 @@ Python (`_C.rasterize_gaussians()`)
     │     │
     │     └──> **回傳 `out_color`, `depth` 給 Python**
 ```
-
-
+---
 - trace forward.cu.preprocessCUDA 
 1. Initialize radius and touched tiles to 0. If this isn't changed, this Gaussian will not be processed further.
 
@@ -40,5 +39,5 @@ Python (`_C.rasterize_gaussians()`)
 10. Inverse 2D covariance and opacity neatly pack into one float4
 
 ---
-
+## Others: To be finish
 
